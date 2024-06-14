@@ -1,0 +1,174 @@
+
+.navbar {
+    border-bottom: 1px solid #d2d2d2; /* Adding bottom border */
+    box-shadow: 0.5px 1px rgba(0, 0, 0, 0.25);
+    padding: 0 16px; /* Horizontal padding for the navbar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-size: 3rem; /* Adjust as needed to make the text fit the desired dimensions */
+    font-weight: bold;
+    color: #e11937 !important; /* Updated color for the CGI logo */
+    display: flex;
+    align-items: center;
+    padding: 5px 8px; /* Setting vertical and horizontal padding for the brand logo */
+}
+
+.navbar-text {
+    font-size: 25px; /* Setting font size for navbar items */
+    font-weight: bold; /* Setting font weight to bold for navbar items */
+    color: #151515 !important; /* Updated color for navbar items */
+    padding-left: 10px; /* Adjust padding to move text slightly to the right */
+    padding-right: 10px; /* Adjust padding to move text slightly to the right */
+}
+
+.navbar-divider {
+    height: 40px;
+    width: 2px;
+    background-color: #ccc;
+    margin-right: 20px; /* Reduce margin to bring items closer */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Ensure there is no left margin */
+}
+
+.navbar-nav .nav-item {
+    padding: 0 8px; /* Setting horizontal padding for navbar items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 25px; /* Setting font size for navbar items */
+    font-weight: bold; /* Setting font weight to bold for navbar items */
+    color: #151515 !important; /* Updated color for navbar items */
+    padding: 25px 0; /* Setting vertical padding for navbar items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1a242f !important; /* Darkening hover state */
+}
+
+.guide-button {
+    background-color: #6941C6; /* Button color */
+    color: white; /* Text color */
+    border-radius: 10px; /* Slightly rounded corners */
+    border: none; /* Remove blue border */
+    margin-top: 150px; /* Margin to position below the navbar */
+    padding: 10px 20px; /* Add padding for button text */
+    position: relative; /* Make sure it respects the layout flow */
+
+}
+
+/* Ensure guide button does not change on hover */
+.guide-button:hover {
+    background-color: #6941C6; /* Button color */
+    color: white; /* Text color */
+}
+
+/* Embed Container Style */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #f9f9f9;
+    margin-top: 50px; /* Adjust margin as needed */
+    border: 2px solid #ccc; /* Adding border to the container */
+    border-radius: 5px; /* Adding rounded corners */
+}
+
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove the default iframe border */
+    z-index: 1; /* Ensure iframe is below other content */
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+    z-index: 1060 !important; /* Ensure the offcanvas is above the guide button */
+}
+
+.refresh-button {
+    background-color: #6941C6; /* Button color */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Remove border */
+    padding: 20px 40px; /* Increase padding for larger button */
+    font-size: 1.5rem; /* Increase font size */
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Ensure refresh button does not change on hover */
+.refresh-button:hover {
+    background-color: #6941C6; /* Button color */
+    color: white; /* Text color */
+}
+
+.last-refreshed-button {
+    background-color: #039855 !important; /* Button color */
+    color: white !important; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Remove border */
+    padding: 20px 40px; /* Increase padding for larger button */
+    font-size: 1.5rem; /* Increase font size */
+    cursor: not-allowed; /* Indicate that the button is not clickable */
+    opacity: 1 !important; /* Ensure full opacity */
+}
+
+/* Ensure last refreshed button does not change on hover */
+.last-refreshed-button:hover {
+    background-color: #039855 !important; /* Button color */
+    color: white !important; /* Text color */
+}
+
+/* Data Upload Heading */
+.data-upload-heading {
+    color: #6938EF; /* Heading color */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-top: -65px; /* Adjust margin to align with the guide button */
+    font-weight: bold;
+}
+
+.upload-box {
+    border: 2px solid #ccc; /* Change to solid border */
+    border-radius: 25px; /* Adjust as needed for rounded corners */
+    padding: 50px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 100px;
+    height: 450px;
+}
+
+.upload-box.dragover {
+    background-color: #f0f0f0; /* Change background color when dragging */
+}
+
+.upload-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upload-content p {
+    font-size: 1.25rem;
+    color: #151515;
+    border: 2px dashed #ccc;
+    padding: 16px 16px;
+    border-radius: 10px;
+
+}
+
+

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Data Upload{% endblock %}
+
+{% block guide_button %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-start">
+            <button class="btn guide-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasGuide" aria-controls="offcanvasGuide">
+                Guide
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="data-upload-heading">Data Upload</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-8 text-center">
+            <div class="upload-box" id="upload-box">
+                <div class="upload-content">
+                    <p>Drag & Drop</p>
+                    <input type="file" id="fileInput" multiple style="display:none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add more content here -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const uploadBox = document.getElementById('upload-box');
+    const fileInput = document.getElementById('fileInput');
+
+    uploadBox.addEventListener('click', () => fileInput.click());
+
+    uploadBox.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadBox.classList.add('dragover');
+    });
+
+    uploadBox.addEventListener('dragleave', () => {
+        uploadBox.classList.remove('dragover');
+    });
+
+    uploadBox.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadBox.classList.remove('dragover');
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+    });
+
+    function handleFiles(files) {
+        const formData = new FormData();
+        for (let i = 0; i < files.length; i++) {
+            formData.append('files', files[i]);
+        }
+
+        axios.post('/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then(response => {
+            console.log('Files uploaded successfully');
+        }).catch(error => {
+            console.error('Error uploading files', error);
+        });
+    }
+</script>
+{% endblock %}

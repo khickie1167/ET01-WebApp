@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block guide_button %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-start">
+            <button class="btn guide-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasGuide" aria-controls="offcanvasGuide">
+                Guide
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="embed-container">
+                <iframe id="powerbi-frame" src="https://app.powerbi.com/reportEmbed?reportId=c7405071-39cf-4fc8-99bd-ff7ff8ba3ef6&autoAuth=true&ctid=b9fec68c-c92d-461e-9a97-3d03a0f18b82" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-12 d-flex justify-content-center">
+            <button id="refresh-dashboard" class="btn refresh-button">Refresh Dashboard</button>
+            <button class="btn last-refreshed-button" disabled>Last Refreshed: <span id="last-refreshed-time"></span></button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
