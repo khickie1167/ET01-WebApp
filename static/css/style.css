@@ -1,4 +1,12 @@
+/* Additional CSS */
 
+/* Add bottom margin for extra spacing */
+.extra-bottom-margin {
+    margin-bottom: 400px; /* Adjust the value as needed */
+}
+
+/* Existing CSS */
+/* Navbar Styles */
 .navbar {
     border-bottom: 1px solid #d2d2d2; /* Adding bottom border */
     box-shadow: 0.5px 1px rgba(0, 0, 0, 0.25);
@@ -55,6 +63,7 @@
     color: #1a242f !important; /* Darkening hover state */
 }
 
+/* Guide Button Styles */
 .guide-button {
     background-color: #6941C6; /* Button color */
     color: white; /* Text color */
@@ -63,7 +72,6 @@
     margin-top: 150px; /* Margin to position below the navbar */
     padding: 10px 20px; /* Add padding for button text */
     position: relative; /* Make sure it respects the layout flow */
-
 }
 
 /* Ensure guide button does not change on hover */
@@ -100,6 +108,7 @@
     z-index: 1060 !important; /* Ensure the offcanvas is above the guide button */
 }
 
+/* Refresh Button Styles */
 .refresh-button {
     background-color: #6941C6; /* Button color */
     color: white; /* Text color */
@@ -116,6 +125,7 @@
     color: white; /* Text color */
 }
 
+/* Last Refreshed Button Styles */
 .last-refreshed-button {
     background-color: #039855 !important; /* Button color */
     color: white !important; /* Text color */
@@ -141,6 +151,14 @@
     font-weight: bold;
 }
 
+.powerbi-heading {
+    color: #6938EF; /* Heading color */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-top: -65px; /* Adjust margin to align with the guide button */
+    font-weight: bold;
+}
+
+/* Upload Box Styles */
 .upload-box {
     border: 2px solid #ccc; /* Change to solid border */
     border-radius: 25px; /* Adjust as needed for rounded corners */
@@ -149,6 +167,7 @@
     cursor: pointer;
     margin-top: 100px;
     height: 450px;
+    transition: border-color 0.3s; /* Add transition for smooth border color change */
 }
 
 .upload-box.dragover {
@@ -168,7 +187,42 @@
     border: 2px dashed #ccc;
     padding: 16px 16px;
     border-radius: 10px;
-
 }
 
+/* Flashing border */
+@keyframes flashing {
+    0% { border-color: #ffa500; }
+    50% { border-color: #ffcc00; }
+    100% { border-color: #ffa500; }
+}
+
+.upload-box.flashing {
+    animation: flashing 1s infinite;
+}
+
+/* Success border */
+.upload-box.upload-success {
+    border-color: #28a745;
+}
+
+/* Failed border */
+.upload-box.upload-failed {
+    border-color: #dc3545;
+}
+
+/* Upload status text */
+.upload-status {
+    font-size: 1.25rem;
+    color: #151515;
+    margin-top: 20px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    max-width: 100%;
+}
+
+.dropdown-item {
+    white-space: normal;
+}
 
