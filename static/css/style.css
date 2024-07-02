@@ -1,9 +1,4 @@
-/* Add bottom margin for extra spacing */
-.extra-bottom-margin {
-    margin-bottom: 400px; /* Adjust the value as needed */
-}
 
-/* Navbar Styles */
 .navbar {
     border-bottom: 1px solid #d2d2d2; /* Adding bottom border */
     box-shadow: 0.5px 1px rgba(0, 0, 0, 0.25);
@@ -13,7 +8,6 @@
     top: 0;
     left: 0;
     z-index: 1030;
-    margin-bottom: 80px; /* Add bottom margin to make space for the content below */
 }
 
 .navbar-brand {
@@ -61,16 +55,15 @@
     color: #1a242f !important; /* Darkening hover state */
 }
 
-/* Guide Button Styles */
 .guide-button {
     background-color: #6941C6; /* Button color */
     color: white; /* Text color */
     border-radius: 10px; /* Slightly rounded corners */
     border: none; /* Remove blue border */
+    margin-top: 150px; /* Margin to position below the navbar */
     padding: 10px 20px; /* Add padding for button text */
     position: relative; /* Make sure it respects the layout flow */
-    margin-top: 150px;
-    margin-left: 10px;
+
 }
 
 /* Ensure guide button does not change on hover */
@@ -107,7 +100,6 @@
     z-index: 1060 !important; /* Ensure the offcanvas is above the guide button */
 }
 
-/* Refresh Button Styles */
 .refresh-button {
     background-color: #6941C6; /* Button color */
     color: white; /* Text color */
@@ -124,7 +116,6 @@
     color: white; /* Text color */
 }
 
-/* Last Refreshed Button Styles */
 .last-refreshed-button {
     background-color: #039855 !important; /* Button color */
     color: white !important; /* Text color */
@@ -146,26 +137,28 @@
 .data-upload-heading {
     color: #6938EF; /* Heading color */
     font-size: 2.5rem; /* Adjust font size as needed */
+    margin-top: -65px; /* Adjust margin to align with the guide button */
     font-weight: bold;
-    margin-top: 150px;
 }
 
 .powerbi-heading {
     color: #6938EF; /* Heading color */
     font-size: 2.5rem; /* Adjust font size as needed */
+    margin-top: -65px; /* Adjust margin to align with the guide button */
     font-weight: bold;
-    margin-top: 150px;
-
 }
 
-/* Upload Box Styles */
+/* Add these styles to your existing CSS */
+
+/* Add these styles to your existing CSS */
+
 .upload-box {
     border: 2px solid #ccc; /* Change to solid border */
     border-radius: 25px; /* Adjust as needed for rounded corners */
     padding: 50px;
     position: relative;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 100px;
     height: 450px;
     transition: border-color 0.3s; /* Add transition for smooth border color change */
 }
@@ -217,24 +210,15 @@
     margin-top: 20px;
 }
 
-/* Dropdown Menu Styles */
-.dropdown-menu {
-    max-width: 100%;
+.card-body {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
 }
 
-.dropdown-item {
-    white-space: normal;
+.large-bottom-margin {
+    margin-bottom: 400px; /* Adjust the value as needed */
 }
 
-/* Links container with scroll */
-.links-container {
-    max-height: 300px; /* Set a maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-.card{
-    border: 2px solid #ccc; /* Change to solid border */
-    border-radius: 25px; /* Adjust as needed for rounded corners */
-    padding: 50px;
-    margin-top: 80px;
+.manage-links-margin {
+    margin-top: 1000px; /* Adjust the value as needed */
 }
