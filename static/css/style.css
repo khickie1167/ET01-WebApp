@@ -220,5 +220,16 @@
 }
 
 .manage-links-margin {
-    margin-top: 1000px; /* Adjust the value as needed */
+    margin-top: 50px; /* Adjust the value as needed */
+}
+
+.manage-links-card {
+    border: 2px solid #ccc; /* Change the border color and width as needed */
+    border-radius: 25px; /* Optional: Adds rounded corners */
+    padding: 15px; /* Optional: Adds padding inside the card */
+}
+
+.manage-links-header{
+    margin-top: 65px;
+    margin-bottom: 150px;
 }
